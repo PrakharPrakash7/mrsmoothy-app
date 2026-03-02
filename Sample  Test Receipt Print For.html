@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Sample Receipt - 2in Sharp</title>
+<style>
+  @page { margin: 4mm; }
+  body { margin: 0; }
+  .r {
+    width: 2in;
+    margin: 0 auto;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12pt;      /* print-friendly size */
+    line-height: 1.25;
+    color: #000;          /* pure black text */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  pre { margin: 0; white-space: pre; }
+  @media print { .r { margin: 0 auto; } }
+</style>
+<div class="r"><pre>       SAMPLE RESTAURANT        
+849, Main Road Brahmpuri, Near V
+ivekanand School, Meerut, 250002
+GSTIN: 27ABCDE1234F1Z5
+FSSAI: 112233445566
+--------------------------------
+Date: 21 Sep 2025, 18:24 IST
+Table: T-07  Order: ORD-2025-0921-1842
+Cashier: Anita  Pay: UPI
+Txn: UPI-XXXXXXXX1234
+--------------------------------
+Item               Q  Rate   Amt
+--------------------------------
+Paneer Tikka       1260.00260.00
+Butter Naan        3 45.00135.00
+Dal Makhani        1220.00220.00
+Mineral Water 1L   1 40.00 40.00
+--------------------------------
+               Sub-Total  655.00
+            Service (5%)   32.75
+               CGST 2.5%   17.19
+               SGST 2.5%   17.19
+               Round Off   -0.13
+================================
+             TOTAL (INR)  722.00
+================================
+Thank you for dining with us!</pre></div>
