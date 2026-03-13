@@ -12,13 +12,12 @@
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
+    "exceljs": "^4.4.0",
     "express": "^4.18.2",
     "express-rate-limit": "^8.3.1",
     "express-validator": "^7.0.1",
-    "firebase-admin": "^11.11.0",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.6.3",
-    "xlsx": "^0.18.5"
+    "mongoose": "^7.6.3"
   },
   "devDependencies": {
     "jest": "^29.7.0",

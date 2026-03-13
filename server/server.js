@@ -20,6 +20,7 @@ app.use('/api/auth', loginLimiter, require('./routes/auth'));
 app.use('/api/orders', require('./routes/orders'));
 app.use('/api/customers', require('./routes/customers'));
 app.use('/api/menu', require('./routes/menu'));
+app.use('/api/export', require('./routes/export'));
 
 // Health check
 app.get('/api/health', (req, res) => {
