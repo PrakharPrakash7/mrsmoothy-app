@@ -1,0 +1,34 @@
+const jwt = require('jsonwebtoken');
+
+/**
+ * Middleware that verifies admin JWT token.
+ */
+function verifyAdmin(req, res, next) {
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return res
+      .status(401)
+      .json({ success: false, message: 'Authentication required' });
+  }
+
+  const token = authHeader.slice(7);
+  try {
+    const decoded = jwt.verify(
+      token,
+      process.env.JWT_SECRET || 'mrsmoothy-secret'
+    );
+    if (decoded.role !== 'admin') {
+      return res
+        .status(403)
+        .json({ success: false, message: 'Admin access required' });
+    }
+    req.admin = decoded;
+    next();
+  } catch (err) {
+    return res
+      .status(401)
+      .json({ success: false, message: 'Invalid or expired token' });
+  }
+}
+
+module.exports = { verifyAdmin };
